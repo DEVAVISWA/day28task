@@ -1,0 +1,10 @@
+.color{
+    background-color:rgb(246,245,248);
+    padding: 50px;
+}
+.textLeft{
+    text-align: left;
+}
+.textRight{
+    text-align: right;
+}
