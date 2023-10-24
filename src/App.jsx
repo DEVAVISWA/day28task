@@ -11,7 +11,7 @@ function App({ products }) {
 
   const [quantity, setQuantity] = useState('')
 
-  const [value , setValue]=useState('1')
+  const [value, setValue] = useState('1')
 
   const changeHandler = (event) => {
     // console.log((Number(event.target.value)))
@@ -23,19 +23,35 @@ function App({ products }) {
 
     <div>
 
-      <div className="container text-center color">
+      <div className="container text-center padding color">
         <div className="row">
           <div className="col textLeft">
 
             {/* CARD */}
-            <h3>{products.title}</h3>
+            
+            <div className="card mb-3 color ">
+              <div className="row g-0 ">
+                <div className="col-md-4 ">
+                  <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" className="img-fluid rounded-start height" />
+                </div>
+                <div className="col-md-8 ">
+                  <div className="card-body ">
+                    <h5 className="card-title">{products.title} </h5>
+                    <p className="card-text">Product description :- {products.description}</p>
+                    <p className="card-text"><small className="text-body-secondary">Product Ratings :- {products.rating}</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* <h3>{products.title}</h3>
             <span>Product description :- {products.description} </span>
-            <span>Product Ratings :- {products.rating} </span>
+            <span>Product Ratings :- {products.rating} </span> */}
 
 
           </div>
           <div className="col textRight">
-            
+
             <select value={value} onChange={changeHandler}>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -47,15 +63,16 @@ function App({ products }) {
               <option value="8">8</option>
               <option value="9">9</option>
             </select>
-            <b>{products.price * value } $</b>
-            
+            <b>{products.price * value} $</b>
+
           </div>
         </div>
-        <TotalContext.Provider value={{ products ,value,setValue}} >
+        <hr />
+        <TotalContext.Provider value={{ products, value, setValue }} >
           <SubTotal />
         </TotalContext.Provider>
-
-        <TotalContext.Provider value={{ products,value,setValue }}>
+          <hr />
+        <TotalContext.Provider value={{ products, value, setValue }}>
           <Total />
         </TotalContext.Provider>
       </div>
