@@ -25,20 +25,20 @@ function App({ products }) {
 
       <div className="container text-center padding color">
         <div className="row">
-          <div className="col textLeft">
+          <div className="col textLeft ">
 
             {/* CARD */}
             
-            <div className="card mb-3 color ">
+            <div className="card mb-3 color border">
               <div className="row g-0 ">
                 <div className="col-md-4 ">
                   <img src="https://i.dummyjson.com/data/products/2/thumbnail.jpg" className="img-fluid rounded-start height" />
                 </div>
                 <div className="col-md-8 ">
                   <div className="card-body ">
-                    <h5 className="card-title">{products.title} </h5>
-                    <p className="card-text">Product description :- {products.description}</p>
-                    <p className="card-text"><small className="text-body-secondary">Product Ratings :- {products.rating}</small></p>
+                    <h3 className="card-title"> <b> {products.title} </b> </h3>
+                    <p className="card-text"><b>Product description :- </b> {products.description}</p>
+                    <p className="card-text"><small className="text-body-secondary"><b>Product Ratings :- </b> {products.rating}</small></p>
                   </div>
                 </div>
               </div>

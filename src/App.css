@@ -12,8 +12,8 @@
     text-align: right;
 }
 .height {
-    height: 200px;
+    height: 210px;
 }
 .border{
-    border: none ;
+    border: none !important;
 }
